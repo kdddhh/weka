@@ -1,38 +1,45 @@
 package chap02;
 
 import java.io.*;
-import java.util.*;
-
+import java.util.Random;
+import weka.classifiers.Evaluation;
 import weka.classifiers.trees.RandomForest;
-import weka.core.Instances;
+import weka.core.*;
 
 public class SimpleWeka {
 	
-	public static void main(String[] args) throws Exception {
+	public static void main(String args[]) throws Exception{
 		int numfolds = 10;
 		int numfold = 0;
-		// 학습데이터가 부족할 때, 훈련데이터와 검증데이터를 분리하면 제대로 된 학습이 이루어질 수 없다.
-		// 따라서, 데이터 셋 전체를 훈련데이터로 사용하고, 또한 검증데이터로 사용할 수 있다. 이를 폴드(fold)라고 함
 		int seed = 1;
+		Instances data = new Instances(
+				       new BufferedReader(
+				       new FileReader("C:/projects/Weka-3-9-6/weka-main/weka-main/data/iris.arff")));
+		Instances train = data.trainCV(numfolds, numfold, new Random(seed));
+		Instances test  = data.testCV (numfolds, numfold);
 		
-		Instances data = new Instances(new BufferedReader(new FileReader(
-															"C:/projects/Weka-3-9-6/data/iris.arff")));
+		RandomForest model=new RandomForest();
+
+		// 2) class assigner
+		train.setClassIndex(train.numAttributes()-1);
+		test.setClassIndex(test.numAttributes()-1);
 		
-		Instances train = data.trainCV(numfolds, numfold, new Random(seed)); // 학습데이터
-		Instances test = data.testCV(numfolds, numfold); // 검증데이터
-		/*
-		 * 데이터 분류
-		 */
+		// 3) cross validate setting  
+		Evaluation eval=new Evaluation(train);
+
+		eval.crossValidateModel(model, train, numfolds, new Random(seed));
+
+		// 4) random forest run 
+		model.buildClassifier(train);
+//		model.setOptions(Utils.splitOptions("-P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1"));
 		
-		RandomForest model = new RandomForest();
+		// 5) evaluate
+		eval.evaluateModel(model, test);
 		
-		train.setClassIndex(train.numAttributes() - 1);
-		test.setClassIndex(train.numAttributes() - 1);
-		/*
-		 * 모델링
-		 * 여기선 데이터 셋이 분류를 위한 모델이기 때문에 분류모델로 정의함
-		 */
-		
+		// 6) print Result text
+		System.out.println(model);                  // model info
+		System.out.println(eval.toSummaryString()); // === Evaluation result ===
+		System.out.println(eval.toMatrixString());  // === Confusion Matrix === 
 	}
-	
+
 }
