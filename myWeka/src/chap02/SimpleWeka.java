@@ -31,7 +31,6 @@ public class SimpleWeka {
 
 		// 4) random forest run 
 		model.buildClassifier(train);
-//		model.setOptions(Utils.splitOptions("-P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1"));
 		
 		// 5) evaluate
 		eval.evaluateModel(model, test);
