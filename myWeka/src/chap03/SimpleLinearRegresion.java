@@ -18,7 +18,7 @@ public class SimpleLinearRegresion {
 				
 		for(int i = 0; i < X.length; i++) {
 			a1 += (X[i] - avgX) * (Y[i] - avgY);
-			a2 += Math.pow((X[i] - avgX), 2);
+			a2 += Math.pow((X[i] - avgX), 2); //특정값의 제곱을 구하는 메소드. ()안에 대상 숫자와 지수를 넣어주면 됨
 		}
 				
 		a = a1 /a2;

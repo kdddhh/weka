@@ -7,20 +7,20 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/arpack_combined.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/commons-math3-3.2.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/commons-math3-3.6.1.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/core.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/imageFilters.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/jcommon-1.0.23.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/jfreechart-1.0.19.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/jna-platform-5.5.0.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/JOpenSurf.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/leastmedsquared-1.0.1.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/lire.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/mtj.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/opencv-249.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/REngine.jar"/>
-	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/weka-main/jar/RserveEngine.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/arpack_combined.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/commons-math3-3.2.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/commons-math3-3.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/core.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/imageFilters.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/jna-platform-5.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/JOpenSurf.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/leastmedsquared-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/lire.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/mtj.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/opencv-249.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/REngine.jar"/>
+	<classpathentry kind="lib" path="C:/projects/Weka-3-9-6/weka-main/jar/RserveEngine.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
