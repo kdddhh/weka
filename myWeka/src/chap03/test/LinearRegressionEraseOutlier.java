@@ -5,12 +5,18 @@ import weka.classifiers.functions.LinearRegression;
 public class LinearRegressionEraseOutlier {
 
 	public static void main(String[] args) throws Exception {
-		ModelApply modelApply = new ModelApply();
+		LinearRegression model = new LinearRegression();
+		String fileName = "regression_outliers";
+		ModelApply modelApply = new ModelApply(fileName, model);
+		modelApply.eraseOutlier(new String[]{"year", "phone calls"}, 0, 63, 70);
 		
-		modelApply.setFileName("regression_outliers");
-		modelApply.setModel(new LinearRegression());
+		modelApply.plot2DInstances("outlier recognition", 0, 1);
 		
-		modelApply.outlierWithCSV(false, true);
+		System.out.println("[ 모델 정보 & 평가 결과 ]");
+		String result = modelApply.outlierWithCSV();
+		System.out.println(model.toString());
+		System.out.println(result);
+
 
 	}
 

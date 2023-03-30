@@ -34,10 +34,6 @@ public class ModelApply {
 		loader.setSource(new File("C:/projects/Weka-3-9-6/data/" + this.fileName + ".csv"));
 		this.data = loader.getDataSet();
 	}
-	
-	public Classifier getModel() {
-		return this.model;
-	}
 
 	public String outlierWithCSV() throws Exception {
 	int numFolds = 10;
